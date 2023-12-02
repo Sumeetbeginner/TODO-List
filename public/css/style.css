@@ -1,0 +1,30 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+
+    --light : #3450a1;
+    --dark : #2f3046;
+    --material : #eb06ff;
+    --text : #cccfd7;
+ 
+}
+
+body{
+
+    width: 100%;
+    height: 100vh;
+    background-color: var(--light);
+    font-family: 'Open Sans';
+    color: white;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
