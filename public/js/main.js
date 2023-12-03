@@ -33,3 +33,24 @@ function validate_name(){
     }
 }
 }
+
+document.getElementById("userName").innerHTML= "Hello, " + localStorage.getItem("UserName") + "!";
+document.getElementById("userName1").innerHTML= "Hello, " + localStorage.getItem("UserName") + "!";
+
+
+function openMenuBarPhone(){
+
+    document.getElementById("topBarPhone1").style.display = "none";
+
+    document.getElementById("sideBarPhone1").style.marginLeft = "0%"
+
+}
+
+function closeMenuBar(){
+
+    setTimeout(() => {
+        document.getElementById("topBarPhone1").style.display = "flex";
+    }, 500);
+
+    document.getElementById("sideBarPhone1").style.marginLeft = "-80%"
+}

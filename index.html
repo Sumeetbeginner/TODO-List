@@ -3,8 +3,18 @@
 
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Effortlessly organize your tasks and boost productivity with our intuitive todo list website. Stay on top of your priorities, set deadlines, and manage your day seamlessly. Experience the satisfaction of completing tasks as you streamline your workflow. Start your journey towards increased efficiency and accomplishment today.">
+
+    <meta name="keywords" content="the todo list, task management system, task management software">
+
+    <meta name="robots" content="index, follow">
+
     <title>Todo List</title>
+
     <link rel="shortcut icon" href="/public/img/appLogo.png" type="image/x-icon">
 
     <script src="https://kit.fontawesome.com/6cc1a5eb9c.js" crossorigin="anonymous"></script>
@@ -15,13 +25,80 @@
 
 <body>
 
-
-    <div class="topBar">
-        <i></i>
-        <i></i>
-        <i></i>
+    <div id="topBarPhone1" class="topBarPhone">
+        <i id="menuBar1" onclick="openMenuBarPhone()" class="fa-solid fa-bars"></i>
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <i class="fa-regular fa-bell"></i>
     </div>
-        
+
+    <div class="sideBarPc">
+
+        <img class="profileImg" src="/public/img/profilePicBoy.png" alt="">
+
+        <p class="greeting" id="userName"></p>
+
+        <div class="listBlockPc">
+            <div id="menuItem0" class="iconFlex">
+                <i id="icon" class="fa-solid fa-home"></i>
+                <p class="iconLabel">Home</p>
+            </div>
+            <div id="menuItem1" class="iconFlex">
+                <i id="icon" class="fa-solid fa-brush"></i>
+                <p class="iconLabel">Themes</p>
+            </div>
+            <div id="menuItem2" class="iconFlex">
+                <i id="icon" class="fa-solid fa-layer-group"></i>
+                <p class="iconLabel">Categories</p>
+            </div>
+            <div id="menuItem3" class="iconFlex">
+                <i id="icon" class="fa-solid fa-pie-chart"></i>
+                <p class="iconLabel">Analytics</p>
+            </div>
+            <div id="menuItem4" class="iconFlex">
+                <i id="icon" class="fa-solid fa-cog"></i>
+                <p class="iconLabel">Setting</p>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div id="sideBarPhone1" class="sideBarPhone">
+
+        <i onclick="closeMenuBar()" class="fa-solid fa-angle-left"></i>
+
+        <img class="profileImg1" src="/public/img/profilePicBoy.png" alt="">
+
+        <p class="greeting1" id="userName1"></p>
+
+        <div class="listBlockPhone">
+            <div id="pmenuItem0" class="piconFlex">
+                <i id="picon" class="fa-solid fa-home"></i>
+                <p class="piconLabel">Home</p>
+            </div>
+            <div id="pmenuItem1" class="piconFlex">
+                <i id="picon" class="fa-solid fa-brush"></i>
+                <p class="piconLabel">Themes</p>
+            </div>
+            <div id="pmenuItem2" class="piconFlex">
+                <i id="picon" class="fa-solid fa-layer-group"></i>
+                <p class="piconLabel">Categories</p>
+            </div>
+            <div id="pmenuItem3" class="piconFlex">
+                <i id="picon" class="fa-solid fa-pie-chart"></i>
+                <p class="piconLabel">Analytics</p>
+            </div>
+            <div id="pmenuItem4" class="piconFlex">
+                <i id="picon" class="fa-solid fa-cog"></i>
+                <p class="piconLabel">Setting</p>
+            </div>
+        </div>
+
+
+    </div>
+
+    
+
 
 
     <script src="/public/js/main.js"></script>
