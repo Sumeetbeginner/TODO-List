@@ -163,6 +163,12 @@ i {
     margin-left: 78%;
 }
 
+.homePage{
+    /* background-color: #eb06ff; */
+    width: 100%;
+    height: 100vh;
+}
+
 /* Media Query for PC */
 @media (min-width:1025px) {
 
@@ -178,6 +184,16 @@ i {
     .sideBarPhone {
         display: none;
     }
+
+
+    .homePage{
+        position: fixed;
+        top: 0%;
+        z-index: -999;
+        width: 82%;
+        left: 18%;
+    }
+
 
 
 }

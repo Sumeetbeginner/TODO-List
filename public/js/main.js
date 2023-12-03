@@ -40,7 +40,7 @@ document.getElementById("userName1").innerHTML= "Hello, " + localStorage.getItem
 
 function openMenuBarPhone(){
 
-    document.getElementById("topBarPhone1").style.display = "none";
+    document.getElementById("homePage1").style.display = "none";
 
     document.getElementById("sideBarPhone1").style.marginLeft = "0%"
 
@@ -49,7 +49,7 @@ function openMenuBarPhone(){
 function closeMenuBar(){
 
     setTimeout(() => {
-        document.getElementById("topBarPhone1").style.display = "flex";
+        document.getElementById("homePage1").style.display = "block";
     }, 500);
 
     document.getElementById("sideBarPhone1").style.marginLeft = "-80%"
