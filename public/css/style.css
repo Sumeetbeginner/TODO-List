@@ -81,6 +81,7 @@ i {
     border-radius: 15px;
     margin-left: 4%;
     margin-right: 4%;
+    cursor: pointer;
 
 }
 
@@ -93,6 +94,7 @@ i {
     border-radius: 15px;
     margin-left: 4%;
     margin-right: 4%;
+    cursor: pointer;
 
 }
 
@@ -163,11 +165,24 @@ i {
     margin-left: 78%;
 }
 
-.homePage{
+.homePage {
     /* background-color: #eb06ff; */
     width: 100%;
     height: 100vh;
 }
+
+.themePage,
+.catPage,
+.anaPage,
+.settPage {
+    width: 100%;
+    height: 100vh;
+    /* background-color: aqua; */
+    display: none;
+}
+
+
+
 
 /* Media Query for PC */
 @media (min-width:1025px) {
@@ -186,7 +201,11 @@ i {
     }
 
 
-    .homePage{
+    .homePage,
+    .themePage,
+    .catPage,
+    .anaPage,
+    .settPage {
         position: fixed;
         top: 0%;
         z-index: -999;

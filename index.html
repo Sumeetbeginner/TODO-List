@@ -25,13 +25,53 @@
 
 <body>
 
-    <div id="homePage1" class="homePage">  <div id="topBarPhone1" class="topBarPhone">
-        <i id="menuBar1" onclick="openMenuBarPhone()" class="fa-solid fa-bars"></i>
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <i class="fa-regular fa-bell"></i>
+    <div id="homePage1" class="homePage">
+        <div id="topBarPhone1" class="topBarPhone">
+            <i id="menuBar1" onclick="openMenuBarPhone('homePage1')" class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-regular fa-bell"></i>
+        </div>
+
+        <p>Home Page</p>
+
     </div>
 
-</div>
+    <div id="themePage1" class="themePage">
+
+        <div id="topBarPhone1" class="topBarPhone">
+            <i id="menuBar1" onclick="openMenuBarPhone('themePage1')" class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-regular fa-bell"></i>
+        </div>
+        <p>Theme Page</p>
+    </div>
+    <div id="catPage1" class="catPage">
+
+        <div id="topBarPhone1" class="topBarPhone">
+            <i id="menuBar1" onclick="openMenuBarPhone('catPage1')" class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-regular fa-bell"></i>
+        </div>
+        <p>Category Page</p>
+    </div>
+    <div id="anaPage1" class="anaPage">
+
+        <div id="topBarPhone1" class="topBarPhone">
+            <i id="menuBar1" onclick="openMenuBarPhone('anaPage1')" class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-regular fa-bell"></i>
+        </div>
+        <p>Analytics Page</p>
+    </div>
+    <div id="settPage1" class="settPage">
+
+        <div id="topBarPhone1" class="topBarPhone">
+            <i id="menuBar1" onclick="openMenuBarPhone('settPage1')" class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-regular fa-bell"></i>
+        </div>
+        <p>Setting Page</p>
+    </div>
 
 
     <div class="sideBarPc">
@@ -40,24 +80,25 @@
 
         <p class="greeting" id="userName"></p>
 
-        <div class="listBlockPc">
-            <div id="menuItem0" class="iconFlex">
+        <div    class="listBlockPc">
+            <div onclick="openHomePage()"  id="menuItem0" class="iconFlex">
                 <i id="icon" class="fa-solid fa-home"></i>
                 <p class="iconLabel">Home</p>
+                
             </div>
-            <div id="menuItem1" class="iconFlex">
+            <div  onclick="openThemePage()"  id="menuItem1" class="iconFlex">
                 <i id="icon" class="fa-solid fa-brush"></i>
                 <p class="iconLabel">Themes</p>
             </div>
-            <div id="menuItem2" class="iconFlex">
+            <div  onclick="openCatPage()" id="menuItem2" class="iconFlex">
                 <i id="icon" class="fa-solid fa-layer-group"></i>
                 <p class="iconLabel">Categories</p>
             </div>
-            <div id="menuItem3" class="iconFlex">
+            <div  onclick="openAnaPage()"  id="menuItem3" class="iconFlex">
                 <i id="icon" class="fa-solid fa-pie-chart"></i>
                 <p class="iconLabel">Analytics</p>
             </div>
-            <div id="menuItem4" class="iconFlex">
+            <div onclick="openSettPage()"  id="menuItem4" class="iconFlex">
                 <i id="icon" class="fa-solid fa-cog"></i>
                 <p class="iconLabel">Setting</p>
             </div>
@@ -75,23 +116,23 @@
         <p class="greeting1" id="userName1"></p>
 
         <div class="listBlockPhone">
-            <div id="pmenuItem0" class="piconFlex">
+            <div onclick="openHomePage()" id="pmenuItem0" class="piconFlex">
                 <i id="picon" class="fa-solid fa-home"></i>
                 <p class="piconLabel">Home</p>
             </div>
-            <div id="pmenuItem1" class="piconFlex">
+            <div onclick="openThemePage()" id="pmenuItem1" class="piconFlex">
                 <i id="picon" class="fa-solid fa-brush"></i>
                 <p class="piconLabel">Themes</p>
             </div>
-            <div id="pmenuItem2" class="piconFlex">
+            <div  onclick="openCatPage()"  id="pmenuItem2" class="piconFlex">
                 <i id="picon" class="fa-solid fa-layer-group"></i>
                 <p class="piconLabel">Categories</p>
             </div>
-            <div id="pmenuItem3" class="piconFlex">
+            <div  onclick="openAnaPage()"  id="pmenuItem3" class="piconFlex">
                 <i id="picon" class="fa-solid fa-pie-chart"></i>
                 <p class="piconLabel">Analytics</p>
             </div>
-            <div id="pmenuItem4" class="piconFlex">
+            <div  onclick="openSettPage()"  id="pmenuItem4" class="piconFlex">
                 <i id="picon" class="fa-solid fa-cog"></i>
                 <p class="piconLabel">Setting</p>
             </div>
@@ -101,8 +142,8 @@
     </div>
 
 
-      
-    <p></p>
+
+
 
 
 
