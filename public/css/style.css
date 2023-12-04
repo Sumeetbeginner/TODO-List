@@ -9,7 +9,7 @@
 
     --light: #21387e;
     --dark: #2f3046;
-    --material: #eb06ff;
+    --material: #e74ff5;
     --text: #cccfd7;
 
 }
@@ -22,6 +22,8 @@ body {
     font-family: 'Open Sans';
     color: white;
     user-select: none;
+    z-index: -9;
+    overflow: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -181,7 +183,22 @@ i {
     display: none;
 }
 
+.fa-circle-plus{
+    font-size: 50px;
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    z-index: 99999;
+    cursor: pointer;
+    text-shadow: 3px 3px 3px black;
+}
 
+.fa-circle-plus:active{
+
+color: var(--material);
+text-shadow: none;
+
+}
 
 
 /* Media Query for PC */
@@ -200,6 +217,15 @@ i {
         display: none;
     }
 
+    .fa-circle-plus{
+        font-size: 50px;
+        position: fixed;
+        bottom: 40px;
+        right: 30px;
+        z-index: 99999;
+        cursor: pointer;
+    }
+    
 
     .homePage,
     .themePage,
@@ -208,11 +234,10 @@ i {
     .settPage {
         position: fixed;
         top: 0%;
-        z-index: -999;
         width: 82%;
         left: 18%;
     }
 
-
+    
 
 }
