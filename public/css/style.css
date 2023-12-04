@@ -200,6 +200,70 @@ text-shadow: none;
 
 }
 
+.fixedElement{
+    width: 100%;
+    height: 100vh;
+    background-color: #2f3046;
+    position: absolute;
+    top: 0%;
+    z-index: 999999;
+    transition: all 0.8s ease-in-out;
+}
+
+.alignCenter{
+    text-align: center;
+}
+
+#headingTodo1{
+
+    font-size: 25px;
+    margin-top:6%;
+}
+
+input, select{
+    width: 87%;
+    height: 6vh;
+    display: block;
+    margin: auto;
+    margin-top: 3%;
+    border-radius: 13px;
+    background-color: var(--light);
+    outline: none;
+    border: none;
+    border: solid 2px var(--material);
+    text-align: center;
+    color: white;
+    font-size: 18px;
+}
+
+.label{
+
+    text-align: center;
+    margin-top: 10%;
+}
+
+#taskName1{
+    margin-top: 10%;
+}
+
+.priority{
+    margin-top: 10%;
+}
+
+.desc{
+    margin-top: 10%;
+}
+
+.submitTask{
+    margin-top: 14%;
+    width: 60%;
+    background-color: var(--material);
+    cursor: pointer;
+}
+
+#taskGenerator1{
+top: -120%;
+}
 
 /* Media Query for PC */
 @media (min-width:1025px) {
@@ -238,6 +302,34 @@ text-shadow: none;
         left: 18%;
     }
 
+    .fixedElement{
+        width: 40%;
+        height: 90vh;
+        background-color: #2f3046;
+        position: absolute;
+        top: 0%;
+        border-radius: 15px;
+        z-index: 999999;
+        top: 50%;
+        left: 50%;
+        margin-top: -45vh;  /* Negative half of height. */
+        margin-left: -20%;  /* Negative half of width. */
+        /* transition: all 1s ease-in-out; */
+    }
+
+    .label{
+        margin-top: 5%;
+    }
+
+    .priority, .desc, #taskName1{
+        margin-top: 6%;
+    }
+
+    .submitTask{
+        margin-top: 9%;
+    }
+
     
+
 
 }

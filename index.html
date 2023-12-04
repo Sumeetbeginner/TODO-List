@@ -34,10 +34,54 @@
             <i class="fa-regular fa-bell"></i>
         </div>
 
-            <i title="Add a Task" id="taskBtn" class="fa-solid fa-circle-plus"></i>
+        <i onclick="openTaskForm()"  title="Add a Task" id="taskBtn" class="fa-solid fa-circle-plus"></i>
+
+        <div id="taskGenerator1" class="fixedElement">
+
+            <h3 id="headingTodo1" class="alignCenter">Add a Task</h3>
+
+            <form action="">
 
 
-            <!-- <div id="taskGenerator1" class="fixedElement"></div> -->
+
+                <input placeholder="Add a Task Here..." id="taskName1" class="taskName" name="taskName" type="text" required>
+
+
+                <p class="label" for="chooseCat">Select Category</p>
+                <select id="chooseCat1" class="chooseCat" name="chooseCat">
+                    <option value="personal">Personal 🧑‍🦰</option>
+                    <option value="work">Work 💼</option>
+                    <option value="study">Study 📚</option>
+                    <option value="health">Health 🍎</option>
+                    <option value="fitness">Fitness 🏃‍♂️</option>
+                    <option value="entertainment">Entertainment 🍿</option>
+                    <option value="coding">Coding 💻</option>
+                    <option value="travel">Travel 🚌</option>
+                    <option value="others">Others 😀</option>
+                </select>
+                
+                <p class="label" for="datePicker">Select Date</p>
+                <input  type="date" name="datePicker" id="datePicker">
+
+                <select class="priority" name="priority" id="priority1">
+                    <option value="2">Select Priority &nbsp; 📊</option>
+                    <option value="1">High 🔼</option>
+                    <option value="2">Medium ↕️</option>
+                    <option value="3">Low 🔽</option>
+                </select>
+
+                <input placeholder="Enter Description if any..." id="desc1" class="desc" type="text">
+
+
+                <input id="submitTask1" class="submitTask" type="button" value="Add a Task">
+
+
+            </form>
+
+        
+
+
+        </div>
 
     </div>
 
@@ -85,25 +129,25 @@
 
         <p class="greeting" id="userName"></p>
 
-        <div    class="listBlockPc">
-            <div onclick="openHomePage()"  id="menuItem0" class="iconFlex">
+        <div class="listBlockPc">
+            <div onclick="openHomePage()" id="menuItem0" class="iconFlex">
                 <i id="icon" class="fa-solid fa-home"></i>
                 <p class="iconLabel">Home</p>
-                
+
             </div>
-            <div  onclick="openThemePage()"  id="menuItem1" class="iconFlex">
+            <div onclick="openThemePage()" id="menuItem1" class="iconFlex">
                 <i id="icon" class="fa-solid fa-brush"></i>
                 <p class="iconLabel">Themes</p>
             </div>
-            <div  onclick="openCatPage()" id="menuItem2" class="iconFlex">
+            <div onclick="openCatPage()" id="menuItem2" class="iconFlex">
                 <i id="icon" class="fa-solid fa-layer-group"></i>
                 <p class="iconLabel">Categories</p>
             </div>
-            <div  onclick="openAnaPage()"  id="menuItem3" class="iconFlex">
+            <div onclick="openAnaPage()" id="menuItem3" class="iconFlex">
                 <i id="icon" class="fa-solid fa-pie-chart"></i>
                 <p class="iconLabel">Analytics</p>
             </div>
-            <div onclick="openSettPage()"  id="menuItem4" class="iconFlex">
+            <div onclick="openSettPage()" id="menuItem4" class="iconFlex">
                 <i id="icon" class="fa-solid fa-cog"></i>
                 <p class="iconLabel">Setting</p>
             </div>
@@ -129,15 +173,15 @@
                 <i id="picon" class="fa-solid fa-brush"></i>
                 <p class="piconLabel">Themes</p>
             </div>
-            <div  onclick="openCatPage()"  id="pmenuItem2" class="piconFlex">
+            <div onclick="openCatPage()" id="pmenuItem2" class="piconFlex">
                 <i id="picon" class="fa-solid fa-layer-group"></i>
                 <p class="piconLabel">Categories</p>
             </div>
-            <div  onclick="openAnaPage()"  id="pmenuItem3" class="piconFlex">
+            <div onclick="openAnaPage()" id="pmenuItem3" class="piconFlex">
                 <i id="picon" class="fa-solid fa-pie-chart"></i>
                 <p class="piconLabel">Analytics</p>
             </div>
-            <div  onclick="openSettPage()"  id="pmenuItem4" class="piconFlex">
+            <div onclick="openSettPage()" id="pmenuItem4" class="piconFlex">
                 <i id="picon" class="fa-solid fa-cog"></i>
                 <p class="piconLabel">Setting</p>
             </div>

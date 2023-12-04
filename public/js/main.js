@@ -178,3 +178,20 @@ function openHomePage(){
 
 
 }
+
+document.getElementById('datePicker').valueAsDate = new Date();
+
+function openTaskForm(){
+  
+const mediaQuery = window.matchMedia('(min-width: 1025px)')
+
+if (mediaQuery.matches) {
+    // console.log("matched1");
+    document.getElementById("taskGenerator1").style.marginTop = "-45vh"
+    document.getElementById("taskGenerator1").style.top = "50%"
+}
+else{
+    // console.log("matched");
+    document.getElementById("taskGenerator1").style.top = "0%"
+}
+}
