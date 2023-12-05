@@ -1,46 +1,46 @@
 
 //* Collecting User Name 
 {
-let user_name;
+    let user_name;
 
-(function new_user() {
+    (function new_user() {
 
-    if (localStorage.getItem("NewUser") == "false") {
+        if (localStorage.getItem("NewUser") == "false") {
 
-        // console.log("Not a New User");
+            // console.log("Not a New User");
 
-    }
-    else {
-        user_name = prompt("Enter Your Name : ");
+        }
+        else {
+            user_name = prompt("Enter Your Name : ");
 
-        if(user_name == "" || user_name == null){
-             
-            validate_name();
+            if (user_name == "" || user_name == null) {
+
+                validate_name();
+            }
+
+            localStorage.setItem("UserName", user_name);
+            localStorage.setItem("NewUser", "false");
         }
 
-        localStorage.setItem("UserName", user_name);
-        localStorage.setItem("NewUser", "false");
-    }
+    })();
 
-})();
+    function validate_name() {
 
-function validate_name(){
+        user_name = prompt("Kindly Enter Your Name ⚠️ : ");
 
-    user_name = prompt("Kindly Enter Your Name ⚠️ : ");
-
-    if(user_name == "" || user_name == null ){
-        validate_name();
+        if (user_name == "" || user_name == null) {
+            validate_name();
+        }
     }
 }
-}
 
-document.getElementById("userName").innerHTML= "Hello, " + localStorage.getItem("UserName") + "!";
-document.getElementById("userName1").innerHTML= "Hello, " + localStorage.getItem("UserName") + "!";
+document.getElementById("userName").innerHTML = "Hello, " + localStorage.getItem("UserName") + "!";
+document.getElementById("userName1").innerHTML = "Hello, " + localStorage.getItem("UserName") + "!";
 
 
 let currentPage;
 
-function openMenuBarPhone(currentId){
+function openMenuBarPhone(currentId) {
 
     currentPage = currentId;
 
@@ -50,7 +50,7 @@ function openMenuBarPhone(currentId){
 
 }
 
-function closeMenuBar(){
+function closeMenuBar() {
 
     setTimeout(() => {
         document.getElementById(currentPage).style.display = "block";
@@ -59,9 +59,9 @@ function closeMenuBar(){
     document.getElementById("sideBarPhone1").style.marginLeft = "-80%"
 }
 
-function openThemePage(){
+function openThemePage() {
 
-    
+
     document.getElementById("homePage1").style.display = "none"
     document.getElementById("themePage1").style.display = "block"
     document.getElementById("catPage1").style.display = "none"
@@ -83,9 +83,9 @@ function openThemePage(){
 
 
 }
-function openCatPage(){
+function openCatPage() {
 
-    
+
     document.getElementById("homePage1").style.display = "none"
     document.getElementById("themePage1").style.display = "none"
     document.getElementById("catPage1").style.display = "block"
@@ -106,9 +106,9 @@ function openCatPage(){
 
 
 }
-function openAnaPage(){
+function openAnaPage() {
 
-    
+
     document.getElementById("homePage1").style.display = "none"
     document.getElementById("themePage1").style.display = "none"
     document.getElementById("catPage1").style.display = "none"
@@ -130,9 +130,9 @@ function openAnaPage(){
 
 
 }
-function openSettPage(){
+function openSettPage() {
 
-    
+
     document.getElementById("homePage1").style.display = "none"
     document.getElementById("themePage1").style.display = "none"
     document.getElementById("catPage1").style.display = "none"
@@ -154,9 +154,9 @@ function openSettPage(){
 
 
 }
-function openHomePage(){
+function openHomePage() {
 
-    
+
     document.getElementById("homePage1").style.display = "block"
     document.getElementById("themePage1").style.display = "none"
     document.getElementById("catPage1").style.display = "none"
@@ -181,17 +181,30 @@ function openHomePage(){
 
 document.getElementById('datePicker').valueAsDate = new Date();
 
-function openTaskForm(){
-  
-const mediaQuery = window.matchMedia('(min-width: 1025px)')
+function openTaskForm() {
 
-if (mediaQuery.matches) {
-    // console.log("matched1");
-    document.getElementById("taskGenerator1").style.marginTop = "-45vh"
-    document.getElementById("taskGenerator1").style.top = "50%"
+    const mediaQuery = window.matchMedia('(min-width: 1025px)')
+
+    if (mediaQuery.matches) {
+        // console.log("matched1");
+        document.getElementById("taskGenerator1").style.marginTop = "-45vh"
+        document.getElementById("taskGenerator1").style.top = "50%"
+    }
+    else {
+        // console.log("matched");
+        document.getElementById("taskGenerator1").style.top = "0%"
+    }
 }
-else{
-    // console.log("matched");
-    document.getElementById("taskGenerator1").style.top = "0%"
-}
+
+function closeTodoBox() {
+    const mediaQuery = window.matchMedia('(min-width: 1025px)')
+
+    if (mediaQuery.matches) {
+        // console.log("matched1");
+        document.getElementById("taskGenerator1").style.top = "-110%"
+    }
+    else {
+        // console.log("matched");
+        document.getElementById("taskGenerator1").style.top = "-110%"
+    }
 }

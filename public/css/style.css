@@ -217,6 +217,7 @@ text-shadow: none;
 #headingTodo1{
 
     font-size: 25px;
+    margin-left: 28%;
     margin-top:6%;
 }
 
@@ -262,11 +263,31 @@ input, select{
 }
 
 #taskGenerator1{
-top: -120%;
+top: -110%;
+}
+
+.fa-circle-xmark{
+ margin-left: auto;
+ margin-right: 6%;
+ font-size: 32px;
+ color: rgb(255, 112, 112);
+}
+
+
+
+.flexTop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Media Query for PC */
 @media (min-width:1025px) {
+
+    .fa-circle-xmark:hover{
+    
+        color: rgb(253, 143, 143);
+    }
 
     .topBarPhone {
         display: none;
@@ -329,7 +350,16 @@ top: -120%;
         margin-top: 9%;
     }
 
+    .fa-circle-xmark{
+        font-size: 33px;
+    }
     
+    #headingTodo1{
+
+        font-size: 25px;
+        margin-left: 33%;
+        margin-top:6%;
+    }
 
 
 }
