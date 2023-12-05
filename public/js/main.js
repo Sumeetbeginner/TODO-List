@@ -20,6 +20,8 @@
 
             localStorage.setItem("UserName", user_name);
             localStorage.setItem("NewUser", "false");
+            localStorage.setItem("TaskNumber", "0");
+            localStorage.setItem("taskData", JSON.stringify([{"empty" : "empty"}]));
         }
 
     })();
@@ -183,6 +185,8 @@ document.getElementById('datePicker').valueAsDate = new Date();
 
 function openTaskForm() {
 
+    
+
     const mediaQuery = window.matchMedia('(min-width: 1025px)')
 
     if (mediaQuery.matches) {
@@ -206,5 +210,62 @@ function closeTodoBox() {
     else {
         // console.log("matched");
         document.getElementById("taskGenerator1").style.top = "-110%"
+    }
+}
+
+function validateTaskName(){
+
+    let taskName = document.getElementById("taskName1").value;
+
+    if(taskName.length <= 5){
+        alert("⚠️ Kindly Keep you Task Name with more than 5 Character")
+
+        return false;
+    }
+
+    return true;
+}
+
+function addTaskFinal(){
+
+    let valTaskName = validateTaskName()
+
+    if(valTaskName){
+
+        let currTaskNo = Number(localStorage.getItem("TaskNumber"));
+
+        currTaskNo = currTaskNo + 1;
+
+        let currTaskName = document.getElementById("taskName1").value;
+
+        let currTaskCat = document.getElementById("chooseCat1").value;
+
+        let currTaskDate = document.getElementById("datePicker").value;
+
+        let currTaskPriority = document.getElementById("priority1").value;
+
+        let currTaskDesc = document.getElementById("desc1").value;
+
+        localStorage.setItem("TaskNumber", currTaskNo);
+
+        let taskData = {
+            "taskNo" : currTaskNo,
+            "taskName" : currTaskName,
+            "taskCat" : currTaskCat,
+            "taskDate" : currTaskDate,
+            "taskPriority" : currTaskPriority,
+            "taskDesc" : currTaskDesc
+        }
+
+        let taskData1 = JSON.parse(localStorage.getItem("taskData"));
+
+        taskData1.unshift(taskData);
+
+        localStorage.setItem("taskData", JSON.stringify(taskData1));
+
+        alert("✅ Task Added Successfully")
+
+        closeTodoBox();
+
     }
 }
