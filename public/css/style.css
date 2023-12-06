@@ -186,7 +186,7 @@ i {
 .fa-circle-plus{
     font-size: 50px;
     position: fixed;
-    bottom: 40px;
+    bottom: 30px;
     right: 30px;
     z-index: 99999;
     cursor: pointer;
@@ -273,7 +273,17 @@ top: -110%;
  color: rgb(255, 112, 112);
 }
 
-
+#todoListBox{
+    /* background-color: #e74ff5; */
+    overflow-y: scroll;
+    background-color: rgba(255, 255, 255, 0.082);
+    width: 92%;
+    display: block;
+    margin: auto;
+    margin-top: 6%;
+    border-radius: 15px;
+    height: 68vh;
+}
 
 .flexTop{
     display: flex;
@@ -361,5 +371,14 @@ top: -110%;
         margin-top:6%;
     }
 
+    #todoListBox{
+        /* background-color: #e74ff5;*/
+         background-color: rgba(255, 255, 255, 0.082);
+        width: 80%;
+        margin-top: 5%;
+        border-radius: 15px;
+        height: 84vh;
+        margin-left: 5%;
+    }
 
 }
