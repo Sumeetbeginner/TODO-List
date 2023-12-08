@@ -211,6 +211,9 @@ function closeTodoBox() {
         // console.log("matched");
         document.getElementById("taskGenerator1").style.top = "-110%"
     }
+
+    document.getElementById("taskName1").value = "";
+    document.getElementById("desc1").value ="";
 }
 
 function validateTaskName(){
@@ -265,8 +268,66 @@ function addTaskFinal(){
 
         alert("✅ Task Added Successfully")
 
+        document.getElementById("todoListBox").innerHTML = "";
+        
         closeTodoBox();
+        addTasksData();
 
     }
 }
 
+let categories = {
+    'personal': '🧑‍🦰',
+    'work': '💼',
+    'study': '📚',
+    'health': '🍎',
+    'fitness': '🏃‍♂️',
+    'entertainment': '🍿',
+    'coding': '💻',
+    'travel': '🚌',
+    'others': '😀'
+  };
+  
+function addTasksData(){
+
+    let taskData1 = JSON.parse(localStorage.getItem("taskData"));
+
+    for(let i = 0; i<taskData1.length - 1; i++){
+
+       let taskBox =  document.createElement("div");
+       taskBox.className = "taskBox";
+       taskBox.id = "taskBox" + i;
+       document.getElementById("todoListBox").appendChild(taskBox);
+
+       let taskStatus = document.createElement("i");
+       taskStatus.className = "fa-regular fa-circle";
+       taskStatus.id = "taskStatus" + i;
+       taskBox.appendChild(taskStatus);
+
+       let taskName = document.createElement("p");
+       taskName.className = "taskNameHere";
+       taskName.id = "taskNameHere" + i;
+       taskBox.appendChild(taskName);
+       taskName.innerHTML = taskData1[i].taskName;
+
+       let taskCat = document.createElement("p");
+       taskCat.className = "taskCat";
+       taskCat.id = "taskCat" + i;
+       taskBox.appendChild(taskCat);
+       taskCat.innerHTML = categories[taskData1[i].taskCat]
+
+       if(taskData1[i].taskPriority == "1"){
+        taskBox.style.border = "solid 2px red"
+       }
+       if(taskData1[i].taskPriority == "2"){
+        taskBox.style.border = "solid 2px orange"
+       }
+       if(taskData1[i].taskPriority == "3"){
+        taskBox.style.border = "solid 2px yellow"
+       }
+
+       
+    }
+}
+
+addTasksData();

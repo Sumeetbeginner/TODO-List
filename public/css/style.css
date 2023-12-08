@@ -183,7 +183,7 @@ i {
     display: none;
 }
 
-.fa-circle-plus{
+.fa-circle-plus {
     font-size: 50px;
     position: fixed;
     bottom: 30px;
@@ -193,14 +193,14 @@ i {
     text-shadow: 3px 3px 3px black;
 }
 
-.fa-circle-plus:active{
+.fa-circle-plus:active {
 
-color: var(--material);
-text-shadow: none;
+    color: var(--material);
+    text-shadow: none;
 
 }
 
-.fixedElement{
+.fixedElement {
     width: 100%;
     height: 100vh;
     background-color: #2f3046;
@@ -210,18 +210,19 @@ text-shadow: none;
     transition: all 0.8s ease-in-out;
 }
 
-.alignCenter{
+.alignCenter {
     text-align: center;
 }
 
-#headingTodo1{
+#headingTodo1 {
 
     font-size: 25px;
     margin-left: 28%;
-    margin-top:6%;
+    margin-top: 6%;
 }
 
-input, select{
+input,
+select {
     width: 87%;
     height: 6vh;
     display: block;
@@ -237,43 +238,43 @@ input, select{
     font-size: 18px;
 }
 
-.label{
+.label {
 
     text-align: center;
     margin-top: 10%;
 }
 
-#taskName1{
+#taskName1 {
     margin-top: 10%;
 }
 
-.priority{
+.priority {
     margin-top: 10%;
 }
 
-.desc{
+.desc {
     margin-top: 10%;
 }
 
-.submitTask{
+.submitTask {
     margin-top: 14%;
     width: 60%;
     background-color: var(--material);
     cursor: pointer;
 }
 
-#taskGenerator1{
-top: -110%;
+#taskGenerator1 {
+    top: -110%;
 }
 
-.fa-circle-xmark{
- margin-left: auto;
- margin-right: 6%;
- font-size: 32px;
- color: rgb(255, 112, 112);
+.fa-circle-xmark {
+    margin-left: auto;
+    margin-right: 6%;
+    font-size: 32px;
+    color: rgb(255, 112, 112);
 }
 
-#todoListBox{
+#todoListBox {
     /* background-color: #e74ff5; */
     overflow-y: scroll;
     background-color: rgba(255, 255, 255, 0.082);
@@ -283,19 +284,83 @@ top: -110%;
     margin-top: 6%;
     border-radius: 15px;
     height: 68vh;
+    
 }
 
-.flexTop{
+.flexTop {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.taskBox {
+    width: 93%;
+    height: 9vh;
+    background-color: var(--dark);
+    display: block;
+    margin: auto;
+    margin-top: 5%;
+    border-radius: 10px;
+    border: solid 2px red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-circle{
+
+    font-size: 20px;
+    color: white;
+    margin-top: -5.8%;
+    padding-right: 6%;
+  
+}
+
+.taskNameHere{
+    width: 68%;
+}
+
 /* Media Query for PC */
 @media (min-width:1025px) {
 
-    .fa-circle-xmark:hover{
+    .fa-circle{
     
+        font-size: 20px;
+        color: white;
+       
+    }
+
+    .fa-circle{
+
+        font-size: 20px;
+        color: white;
+        margin-top: -5.8%;
+        padding-right: 3%;
+      
+    }
+
+    .taskNameHere{
+        width: 87%;
+    }
+    
+
+    .taskBox {
+        width: 93%;
+        height: 9vh;
+        background-color: var(--dark);
+        display: block;
+        margin: auto;
+        margin-top:2%;
+        border-radius: 10px;
+        border: solid 2px red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+
+    .fa-circle-xmark:hover {
+
         color: rgb(253, 143, 143);
     }
 
@@ -312,7 +377,7 @@ top: -110%;
         display: none;
     }
 
-    .fa-circle-plus{
+    .fa-circle-plus {
         font-size: 50px;
         position: fixed;
         bottom: 40px;
@@ -320,7 +385,7 @@ top: -110%;
         z-index: 99999;
         cursor: pointer;
     }
-    
+
 
     .homePage,
     .themePage,
@@ -333,7 +398,7 @@ top: -110%;
         left: 18%;
     }
 
-    .fixedElement{
+    .fixedElement {
         width: 40%;
         height: 90vh;
         background-color: #2f3046;
@@ -343,37 +408,41 @@ top: -110%;
         z-index: 999999;
         top: 50%;
         left: 50%;
-        margin-top: -45vh;  /* Negative half of height. */
-        margin-left: -20%;  /* Negative half of width. */
+        margin-top: -45vh;
+        /* Negative half of height. */
+        margin-left: -20%;
+        /* Negative half of width. */
         /* transition: all 1s ease-in-out; */
     }
 
-    .label{
+    .label {
         margin-top: 5%;
     }
 
-    .priority, .desc, #taskName1{
+    .priority,
+    .desc,
+    #taskName1 {
         margin-top: 6%;
     }
 
-    .submitTask{
+    .submitTask {
         margin-top: 9%;
     }
 
-    .fa-circle-xmark{
+    .fa-circle-xmark {
         font-size: 33px;
     }
-    
-    #headingTodo1{
+
+    #headingTodo1 {
 
         font-size: 25px;
         margin-left: 33%;
-        margin-top:6%;
+        margin-top: 6%;
     }
 
-    #todoListBox{
+    #todoListBox {
         /* background-color: #e74ff5;*/
-         background-color: rgba(255, 255, 255, 0.082);
+        background-color: rgba(255, 255, 255, 0.082);
         width: 80%;
         margin-top: 5%;
         border-radius: 15px;
