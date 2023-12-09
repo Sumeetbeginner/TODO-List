@@ -21,7 +21,7 @@
             localStorage.setItem("UserName", user_name);
             localStorage.setItem("NewUser", "false");
             localStorage.setItem("TaskNumber", "0");
-            localStorage.setItem("taskData", JSON.stringify([{"empty" : "empty"}]));
+            localStorage.setItem("taskData", JSON.stringify([{ "empty": "empty" }]));
         }
 
     })();
@@ -185,7 +185,7 @@ document.getElementById('datePicker').valueAsDate = new Date();
 
 function openTaskForm() {
 
-    
+
 
     const mediaQuery = window.matchMedia('(min-width: 1025px)')
 
@@ -213,14 +213,14 @@ function closeTodoBox() {
     }
 
     document.getElementById("taskName1").value = "";
-    document.getElementById("desc1").value ="";
+    document.getElementById("desc1").value = "";
 }
 
-function validateTaskName(){
+function validateTaskName() {
 
     let taskName = document.getElementById("taskName1").value;
 
-    if(taskName.length <= 5){
+    if (taskName.length <= 5) {
         alert("⚠️ Kindly Keep you Task Name with more than 5 Character")
 
         return false;
@@ -229,11 +229,11 @@ function validateTaskName(){
     return true;
 }
 
-function addTaskFinal(){
+function addTaskFinal() {
 
     let valTaskName = validateTaskName()
 
-    if(valTaskName){
+    if (valTaskName) {
 
         let currTaskNo = Number(localStorage.getItem("TaskNumber"));
 
@@ -252,12 +252,12 @@ function addTaskFinal(){
         localStorage.setItem("TaskNumber", currTaskNo);
 
         let taskData = {
-            "taskNo" : currTaskNo,
-            "taskName" : currTaskName,
-            "taskCat" : currTaskCat,
-            "taskDate" : currTaskDate,
-            "taskPriority" : currTaskPriority,
-            "taskDesc" : currTaskDesc
+            "taskNo": currTaskNo,
+            "taskName": currTaskName,
+            "taskCat": currTaskCat,
+            "taskDate": currTaskDate,
+            "taskPriority": currTaskPriority,
+            "taskDesc": currTaskDesc
         }
 
         let taskData1 = JSON.parse(localStorage.getItem("taskData"));
@@ -269,7 +269,7 @@ function addTaskFinal(){
         alert("✅ Task Added Successfully")
 
         document.getElementById("todoListBox").innerHTML = "";
-        
+
         closeTodoBox();
         addTasksData();
 
@@ -286,48 +286,106 @@ let categories = {
     'coding': '💻',
     'travel': '🚌',
     'others': '😀'
-  };
-  
-function addTasksData(){
+};
+
+function addTasksData() {
 
     let taskData1 = JSON.parse(localStorage.getItem("taskData"));
 
-    for(let i = 0; i<taskData1.length - 1; i++){
+    for (let i = 0; i < taskData1.length - 1; i++) {
 
-       let taskBox =  document.createElement("div");
-       taskBox.className = "taskBox";
-       taskBox.id = "taskBox" + i;
-       document.getElementById("todoListBox").appendChild(taskBox);
+        let taskBox = document.createElement("div");
+        taskBox.className = "taskBox";
+        taskBox.id = "taskBox" + i;
+        document.getElementById("todoListBox").appendChild(taskBox);
 
-       let taskStatus = document.createElement("i");
-       taskStatus.className = "fa-regular fa-circle";
-       taskStatus.id = "taskStatus" + i;
-       taskBox.appendChild(taskStatus);
+        let taskBoxInside = document.createElement("div");
+        taskBoxInside.className = "taskBoxInside";
+        taskBoxInside.id = "taskBoxInside" + i;
+        taskBox.appendChild(taskBoxInside);
 
-       let taskName = document.createElement("p");
-       taskName.className = "taskNameHere";
-       taskName.id = "taskNameHere" + i;
-       taskBox.appendChild(taskName);
-       taskName.innerHTML = taskData1[i].taskName;
+        let taskStatus = document.createElement("i");
+        taskStatus.className = "fa-regular fa-circle";
+        taskStatus.id = "taskStatus" + i;
+        taskBoxInside.appendChild(taskStatus);
 
-       let taskCat = document.createElement("p");
-       taskCat.className = "taskCat";
-       taskCat.id = "taskCat" + i;
-       taskBox.appendChild(taskCat);
-       taskCat.innerHTML = categories[taskData1[i].taskCat]
+        let taskName = document.createElement("p");
+        taskName.className = "taskNameHere";
+        taskName.id = "taskNameHere" + i;
+        taskBoxInside.appendChild(taskName);
+        taskName.innerHTML = taskData1[i].taskName;
 
-       if(taskData1[i].taskPriority == "1"){
-        taskBox.style.border = "solid 2px red"
-       }
-       if(taskData1[i].taskPriority == "2"){
-        taskBox.style.border = "solid 2px orange"
-       }
-       if(taskData1[i].taskPriority == "3"){
-        taskBox.style.border = "solid 2px yellow"
-       }
+        let taskCat = document.createElement("p");
+        taskCat.className = "taskCat";
+        taskCat.id = "taskCat" + i;
+        taskBoxInside.appendChild(taskCat);
+        taskCat.innerHTML = categories[taskData1[i].taskCat]
 
-       
+        if (taskData1[i].taskPriority == "1") {
+            taskBox.style.border = "solid 2px red"
+        }
+        if (taskData1[i].taskPriority == "2") {
+            taskBox.style.border = "solid 2px orange"
+        }
+        if (taskData1[i].taskPriority == "3") {
+            taskBox.style.border = "solid 2px yellow"
+        }
+
+
     }
 }
 
 addTasksData();
+let clickedEleId;
+function clickedTaskBox() {
+
+    let clickEle = document.getElementsByClassName("taskBox");
+
+    for (let i = 0; i < clickEle.length; i++) {
+        clickEle[i].addEventListener("click", function () {
+
+            clickedEleId = this.id;
+            clickedEleId = String(clickedEleId).substring(7)
+
+            expandTaskBox();
+        });
+
+    }
+}
+
+
+
+clickedTaskBox();
+
+let currExpandedBox = false;
+
+function expandTaskBox() {
+
+    if (currExpandedBox == false) {
+
+        let currDataOrder = JSON.parse(localStorage.getItem("taskData"));
+
+        document.getElementById("taskBox" + clickedEleId).style.maxHeight = "1000px"
+
+      
+            let desc = document.createElement("p");
+            desc.className = "currTaskDesc";
+            desc.innerHTML = currDataOrder[clickedEleId].taskDesc;
+            document.getElementById("taskBox" + clickedEleId).appendChild(desc)
+    
+            let cat = document.createElement("p");
+            cat.className = "currTaskCat";
+            cat.innerHTML = currDataOrder[clickedEleId].taskCat + categories[currDataOrder[clickedEleId].taskCat];
+            document.getElementById("taskBox" + clickedEleId).appendChild(cat)
+    
+            let closeIcon = document.createElement("i");
+            closeIcon.className = "fa-solid fa-angle-down";
+            document.getElementById("taskBox" + clickedEleId).appendChild(closeIcon)
+    
+       
+     
+        currExpandedBox = true;
+
+    }
+
+}

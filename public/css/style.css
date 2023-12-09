@@ -193,7 +193,9 @@ i {
     text-shadow: 3px 3px 3px black;
 }
 
-.fa-circle-plus:active , .fa-filter:active, .fa-magnifying-glass:active{
+.fa-circle-plus:active,
+.fa-filter:active,
+.fa-magnifying-glass:active {
 
     color: var(--material);
     text-shadow: none;
@@ -285,7 +287,7 @@ select {
     margin-top: 6%;
     border-radius: 15px;
     height: 68vh;
-    
+
 }
 
 .flexTop {
@@ -295,71 +297,160 @@ select {
 }
 
 .taskBox {
-    width: 93%;
-    height: 9vh;
+    width: 90%;
     background-color: var(--dark);
     display: block;
     margin: auto;
     margin-top: 5%;
     border-radius: 10px;
     border: solid 2px red;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    cursor: pointer;
+    max-height: 0;
+    transition: max-height 1s ease-in-out; 
+    padding-top: 6%;
+    padding-bottom: 13%;
+    overflow-y: scroll;
+ 
 }
 
-.fa-circle{
+.clickable.expanded {
+    max-height: 1000px;
+  }
+
+.fa-circle {
 
     font-size: 20px;
     color: white;
     margin-top: -5.8%;
     padding-right: 6%;
-  
+
 }
 
-.taskNameHere{
+.taskNameHere {
     width: 68%;
+}
+
+.taskBoxInside {
+
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--dark);
+}
+
+.currTaskDesc{
+    background-color: rgb(24, 128, 128);
+    width: fit-content;
+    padding: 3% 5%;
+    display: block;
+    margin-left: 3.5%;
+    border-radius: 10px;
+    margin: auto;
+    text-align: center;
+    margin-top: 8%;
+
+}
+.currTaskCat{
+   
+    width: fit-content;
+    padding: 3% 5%;
+    display: block;
+    margin-left: 3.5%;
+    border-radius: 10px;
+    margin: auto;
+    text-align: center;
+    margin-top: 7%;
+    background-color: rgb(129, 49, 145);
+}
+
+.fa-angle-down{
+    text-align: center;
+    width: fit-content;
+    font-size: 25px;
+    display: block;
+    margin: auto;
 }
 
 /* Media Query for PC */
 @media (min-width:1025px) {
 
-    .fa-circle{
+    .fa-angle-down{
+        text-align: center;
+        width: fit-content;
+        font-size: 30px;
+        display: block;
+        margin: auto;
+    }
     
-        font-size: 20px;
-        color: white;
-       
+
+    .currTaskDesc{
+        background-color: rgb(24, 128, 128);
+        width: fit-content;
+        padding: 1% 2%;
+        margin-left: 3.5%;
+        margin-top: 3%;
+        border-radius: 10px;
+    
+    }
+    .currTaskCat{
+        background-color: rgb(129, 49, 145);
+        width: fit-content;
+        padding: 1% 2%;
+        margin-left: 3.5%;
+        margin-top: 2%;
+        border-radius: 10px;
+    
     }
 
-    .fa-circle{
+    .fa-circle {
 
         font-size: 20px;
         color: white;
-        margin-top: -6.8%;
+
+    }
+
+    .fa-circle {
+
+        font-size: 20px;
+        color: white;
+        margin-top: -5.8%;
         padding-right: 3%;
-      
+
     }
 
-    .taskNameHere{
+    .taskNameHere {
         width: 87%;
     }
-    
+
 
     .taskBox {
         width: 93%;
-        height: 9vh;
-        background-color: var(--dark);
+max-height: 0;
+
         display: block;
         margin: auto;
-        margin-top:2%;
+        margin-top: 2%;
         border-radius: 10px;
         border: solid 2px red;
+        padding-top: 2%;
+        padding-bottom: 4.5%;
+        cursor: pointer;
+        transition: max-height 1s ease-in-out;
+        overflow-y: scroll;
+    }
+
+    .taskBox.expanded{
+        max-height: 1000px;
+    }
+
+    .taskBoxInside {
+
         display: flex;
         justify-content: center;
-        align-items: center;
-        cursor: pointer;
+        width: 100%;
+        background-color: var(--dark);
+
     }
-    
 
     .fa-circle-xmark:hover {
 
@@ -368,20 +459,21 @@ select {
 
     .topBarPhone {
         display: block;
-     
+
         position: fixed;
         right: 0px;
 
     }
 
-    .fa-filter, .fa-magnifying-glass{
+    .fa-filter,
+    .fa-magnifying-glass {
         font-size: 43px;
         margin-top: 60%;
         cursor: pointer;
         text-shadow: 3px 3px 3px black;
     }
 
-    #menuBar1{
+    #menuBar1 {
         display: none;
     }
 
