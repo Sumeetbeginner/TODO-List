@@ -48,8 +48,8 @@ i {
     margin-left: 3%;
 }
 
-.fa-bell {
-    margin-right: 3%;
+.fa-filter {
+    margin-right: 7%;
     padding-left: 9%;
 }
 
@@ -193,7 +193,7 @@ i {
     text-shadow: 3px 3px 3px black;
 }
 
-.fa-circle-plus:active {
+.fa-circle-plus:active , .fa-filter:active, .fa-magnifying-glass:active{
 
     color: var(--material);
     text-shadow: none;
@@ -265,6 +265,7 @@ select {
 
 #taskGenerator1 {
     top: -110%;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.438);
 }
 
 .fa-circle-xmark {
@@ -334,7 +335,7 @@ select {
 
         font-size: 20px;
         color: white;
-        margin-top: -5.8%;
+        margin-top: -6.8%;
         padding-right: 3%;
       
     }
@@ -356,6 +357,7 @@ select {
         display: flex;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
     }
     
 
@@ -365,6 +367,21 @@ select {
     }
 
     .topBarPhone {
+        display: block;
+     
+        position: fixed;
+        right: 0px;
+
+    }
+
+    .fa-filter, .fa-magnifying-glass{
+        font-size: 43px;
+        margin-top: 60%;
+        cursor: pointer;
+        text-shadow: 3px 3px 3px black;
+    }
+
+    #menuBar1{
         display: none;
     }
 
@@ -380,8 +397,8 @@ select {
     .fa-circle-plus {
         font-size: 50px;
         position: fixed;
-        bottom: 40px;
-        right: 30px;
+        bottom: 58px;
+        right: 13px;
         z-index: 99999;
         cursor: pointer;
     }
@@ -443,11 +460,11 @@ select {
     #todoListBox {
         /* background-color: #e74ff5;*/
         background-color: rgba(255, 255, 255, 0.082);
-        width: 80%;
-        margin-top: 5%;
+        width: 86%;
+        margin-top: 1.7%;
         border-radius: 15px;
-        height: 84vh;
-        margin-left: 5%;
+        height: 94vh;
+        margin-left: 2%;
     }
 
 }
